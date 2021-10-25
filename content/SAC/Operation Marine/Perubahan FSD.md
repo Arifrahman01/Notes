@@ -1,0 +1,10 @@
+| Kategori    | Topik              | Versi 1.5                                                     | Versi 1.6.1                                                                                | Halaman (V1.6.1) |
+| :---------- | :----------------- | :------------------------------------------------------------ | :----------------------------------------------------------------------------------------- | :--------------- |
+| Logika Data | Order Type Filter  | Menggunakan filter OrderType = 'OBRV' untuk Overburden.       | Menambahkan filter OrderType = 'ENVI' selain OBRV.                                         | 6-7              |
+| Logika Data | Fuel Quantity      | Sumber tunggal dari field FUEL_QTY pada tabel ZPP_T221.       | Logika Union: Gabungan ZPP_T221 (Data > Juli 2025) dan sum(AFRU-ISM01) (Data < Juli 2025). | 16               |
+| Logika Data | Material Reference | Referensi material bersifat umum untuk Coal.                  | Penambahan spesifikasi: CO-RC (Raw Coal) dan CO-CC (Crushed Coal).                         | 12               |
+| Visualisasi | Story Design       | Nama Page: "Production & Logistic Performance".               | Nama Page: "Production and Logistics Performance (DSP)".                                   | 38               |
+| Model SAC   | Model 2.4.2        | Nama Model: "SAC_SMC_PROCUREMENT" (Fokus pada pengadaan).     | Nama Model: "Equipment Status and Availability (JB)" (Fokus pada alat berat).              | 69               |
+| Model SAC   | Model 2.4.3        | Nama Model: "SAC_SMC_MATERIALSTOCK" (Fokus pada stok gudang). | Nama Model: "Production and Logistics Performance (DSP)" (Fokus pada ritase/logistik).     | 71               |
+| Model SAC   | Model 2.4.4        | Belum terdefinisi secara detail untuk mining cost.            | Nama Model: "Cost Control & Asset Utilization (DSP)".                                      | 79               |
+| Metadata    | Source Table       | Referensi tabel standar.                                      | Penambahan referensi tabel V_COSS_VIEW dan V_COSP_VIEW untuk kalkulasi biaya peralatan.    | 81               |
