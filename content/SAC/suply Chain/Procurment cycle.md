@@ -22,6 +22,33 @@ CDS     = 2CZVBMMXX002_CV
 		- Filter
 			- PO Status =  PO Received, 
 			- InvoicePaymentStatus = Invoice Posted & Not Paid
+			
+- Total Document PO Release Latest
+	- Numeric
+		- Total Purchased Document
+			- Calculation
+				- Operation = Count Dimensions
+				- Aggregation = Purchasing Document
+				
+			- Filter
+				- POSTATUS 
+					- PO Outstanding
+					- PO Outstanding Partial Received
+				- PO Received
+	- Grafik
+		- Measure
+			- PO Outstanding
+			- PO Received
+- Total Document PO Outstanding
+	- Numeric
+		- Total Purchased Document
+			- Calculation
+				- Operation = Count Dimention
+				- Aggregation = Purchasing Document
+	- Filter
+		- PO Status
+			- PO Outstanding
+			- PO Outstanding Partial Received
 	
 - Total Document PR Approved Lates
 	- Total Doc Purchase Requistor = Count Purchase Requistor
