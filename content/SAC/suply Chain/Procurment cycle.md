@@ -29,5 +29,6 @@ CDS     = 2CZVBMMXX002_CV
 		Qty Purchase Order
 - PR VS PO Value
 	-Left y Axist =  Value Purchase Request
-	-Righ y Axist = Value Purchase Order
+	-Righ y Axist = Value Purchase Order 
+	
 	
