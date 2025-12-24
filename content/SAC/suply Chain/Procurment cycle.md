@@ -16,8 +16,10 @@ CDS     = 2CZVBMMXX002_CV
 		Group by Invoice Payment Status
 
 - Total Document Invoiced Receipt
-	- Numeric
-		Total Purchased Document Filter(PO Status = 'PO Received', InvoicePaymentStatus='Invoice Posted & Not Paid') 
+	- Total Purchased Document 
+		- Filter
+			- PO Status = 'PO Received', 
+			- InvoicePaymentStatus='Invoice Posted & Not Paid') 
 	- Grafik
 		Po Outstanding, PO Received
 - Total Document PO Handling
@@ -30,5 +32,3 @@ CDS     = 2CZVBMMXX002_CV
 - PR VS PO Value
 	-Left y Axist =  Value Purchase Request
 	-Righ y Axist = Value Purchase Order 
-	
-	

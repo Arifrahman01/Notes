@@ -2,9 +2,9 @@ FEED BACK SEMENTARA
 Modul: Contract
 Review by: Iqbal
 
-1. ✔️ ntuk pencarian nomor FSA, bisa dikasih preview nama buyer (Cth: 0721/DR/25-  FSA OSS JUNE GAR38 SPOT) u/ memudahkan navigasi
+1.  ntuk pencarian nomor FSA, bisa dikasih preview nama buyer (Cth: 0721/DR/25-  FSA OSS JUNE GAR38 SPOT) u/ memudahkan navigasi
 2. Fitur search dapat diklik di mana user dapat search based on buyer/bulan/etc
-3. ✔️ Tombol attachment sebaiknya menampilkan file pada status terakhir (cth: apabila status masih draft, maka cukup munculkan file draft). Sehingga tidak boros ruang
+3. Tombol attachment sebaiknya menampilkan file pada status terakhir (cth: apabila status masih draft, maka cukup munculkan file draft). Sehingga tidak boros ruang
 4. Koreksi spelling TERMINACE menjadi TERMINATE
 5. Tombol terminate tidak usah muncul. Dia muncul apabila klik more (seperti ikon 3 titik pada android). Tombol tsb jarang u/ dipakai.
 

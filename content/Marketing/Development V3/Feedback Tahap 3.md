@@ -16,9 +16,9 @@ MODUL CONTRACT
 
 MODUL LAYCAN BOOKING
 1. ✔️	Pada modul “Laycan Bookings” tolong tambahkan isian “Loading Port” dan itu wajib. Loading port sbb:
- 	Tj. Pemancingan
-	Bunati
-	Tanjung
+	- Bunati
+	- Tj j. Pemancingan
+	- Tanjung
 
 2. ✔️ Untuk pop up “Update Vessel” sudah sangat bagus. Akan tetapi, tolong ditambahkan isian yang belum terisi. 
            Misal, vessel baru nominated. Pada saat tersebut, isian “Arrival Date” masih kosong. Sehingga, di pop up Update Vessel, ada isian tersebut. Karena masih kosong
