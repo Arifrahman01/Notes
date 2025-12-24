@@ -1,5 +1,7 @@
 Modeler = Model 2 Test
 CDS     = 2CZVBMMXX002_CV
+
+--------------------------------------------------------------------------
 - Average PR approve to PO Received 
 	- Numeric 
 		PR  Release - PO Received
@@ -18,17 +20,37 @@ CDS     = 2CZVBMMXX002_CV
 - Total Document Invoiced Receipt
 	- Total Purchased Document 
 		- Filter
-			- PO Status = 'PO Received', 
-			- InvoicePaymentStatus='Invoice Posted & Not Paid') 
-	- Grafik
-		Po Outstanding, PO Received
-- Total Document PO Handling
-	Total Purchased Document, Filter PO Status = 'PO Outstanding Partial Received, PO Outstanding'
-
+			- PO Status =  PO Received, 
+			- InvoicePaymentStatus = Invoice Posted & Not Paid
+	
+- Total Document PR Approved Lates
+	- Total Doc Purchase Requistor = Count Purchase Requistor
+	- Filter
+		- PRAPPROVEDFLAG = 'Approved'
+--------------------------------------------------------------------------
 - PR VS PO Quantity
 	- Left Y Axist
-		Qty Purchase Request
-		Qty Purchase Order
+		- Qty Purchase Request (QuantityRequestor )
+		- Qty Purchase Order (Quantity Ordered)
+	- Dimension 
+		- CalenderMonthPR
+	
 - PR VS PO Value
-	-Left y Axist =  Value Purchase Request
-	-Righ y Axist = Value Purchase Order 
+	- Left y Axist  
+		 - Value Purchase Request (ValueRequested)
+	- Righ y Axist
+		 - Value Purchase Order (Value Ordered)
+	- Dimension 
+		- CalenderMonthPR
+-------------------------------------------------------------------------
+- PO Release VS PO Outstanding VS Received Quantity
+	- Left y Axist
+		- Qty Purchase Order (QuantityOrdered)
+		- Qty PO Outstanding (POQuantityOutstanding)
+		- Qty PO Received (POQuantityReceidev)
+-  PO Release VS PO Outstanding VS Received Value
+	- Lefy y Axist
+		- Value  Purchase Order (ValueOrdered)
+		- Value PO Outstanding (POValueOutstanding)
+		- Value PO Received (POValueReceived)
+	
