@@ -12,10 +12,10 @@ CDS     = 2CZVBMMXX002_CV
 				- Aggeration = Supplier
 			- Filter 
 				- FLAG 3 Month = 1
-				- 
+				
 - Total Purchase Document
-		- Type Chart
-			- Numeric Point
+	- Type Chart
+		- Numeric Point
 		- Source Data
 			- Total Purchase Document
 				- Calculation
@@ -23,16 +23,16 @@ CDS     = 2CZVBMMXX002_CV
 					- Aggeration =  Purchasing Document
 						
 - Total Purchase Order (IDR)
-		- Type Chart
-			- Numeric Point
-		- Source Data
-			- Value Purchase Order (Value Ordered)
+	- Type Chart
+		- Numeric Point
+	- Source Data
+		- Value Purchase Order (Value Ordered)
 			
 - Total PO Received Item
-		- Type Chart
-			- Numeric Point
-		- Source Data
-			- Qty PO Received (POQuantityReceived)
+	- Type Chart
+		- Numeric Point
+	- Source Data
+		- Qty PO Received (POQuantityReceived)
 			
 - Total PO Outstanding Item
 		- Type Chart
@@ -41,10 +41,10 @@ CDS     = 2CZVBMMXX002_CV
 			- Qty PO Outstanding (POQuantityOutstanding)
 			
 - Average Duration from Purchased Order Release /Until Delivered (Days)
-		- Type Chart 
-			- Numeric Point
-		- Source Data
-			- PO Release VS PO Received
+	- Type Chart 
+		- Numeric Point
+	- Source Data
+		- PO Release VS PO Received
 			- Calculation
 				- Operation = AVERAGE excl. 0, Null
 				- Measure = Average Days
@@ -90,6 +90,7 @@ CDS     = 2CZVBMMXX002_CV
 			 - Supplier
 				 - Calculation
 					 - RUNALL_PCT_ITEM / 100
+					 
 - Top Supplier Performance
 	- Type Chart
 		- Table
