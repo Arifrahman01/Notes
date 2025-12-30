@@ -54,10 +54,10 @@
 - [ ] Perlu punya ringkasan di atas seperti Modul Operations yang isinya jumlah volume terhitung berdasarkan laycan yang sudah di-confirm. Tidak perlu ada persentase karena tidak ada pembaginya. Cukup penjumlahan dari data “Lifting Volume (MT)” pada modul tersebut.
 ---
 # Vessel Operation
-- [ ] Sama seperti Nomor (5) pada Modul Laycan Bookings. Harus ada filter berdasarkan loading port 
-- [ ] Sama seperti Nomor (3) dan Nomor (4) Modul Laycan Bookings 
-- [ ] Harusnya ada data “Cargo Volume” yakni jumlah kargo yang mau diisi berdasarkan isian di Laycan Booking (misal 70,000) serta “Loaded Volume” yakni volume kargo yang telah dialokasikan sejauh ini.
-- [ ] “Lifting Volume” -> “Loaded Volume” 
-- [ ] “Laycan Quantity" -> “Cargo Volume”
+- [x] Sama seperti Nomor (5) pada Modul Laycan Bookings. Harus ada filter berdasarkan loading port 
+- [x] Sama seperti Nomor (3) dan Nomor (4) Modul Laycan Bookings 
+- [x] Harusnya ada data “Cargo Volume” yakni jumlah kargo yang mau diisi berdasarkan isian di Laycan Booking (misal 70,000) serta “Loaded Volume” yakni volume kargo yang telah dialokasikan sejauh ini.
+- [x] “Lifting Volume” -> “Loaded Volume” 
+- [x] “Laycan Quantity" -> “Cargo Volume”
 
 ---
