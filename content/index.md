@@ -13,11 +13,11 @@ Ini adalah ruang di mana saya mencatat proses belajar, dokumentasi sistem, dan p
 
 Pilih topik yang ingin Anda jelajahi di bawah ini:
 
-| 📂 Kategori | 📝 Deskripsi |
-| :--- | :--- |
-| **[Supply Chain](/SAC/Suply-Chain)** | Dokumentasi *Procurement Cycle*, *Supplier Performance*, dan *Closing Value*. |
-| **[Marketing](/Marketing/Progress)** | Pantau *Progress Feedback* dan *Development* terbaru. |
-| **[Operation Marine](/SAC/Operation-Marine)** | Catatan teknis mengenai perubahan FSD dan logistik marine. |
+| 📂 Kategori                                   | 📝 Deskripsi                                                                  |
+| :-------------------------------------------- | :---------------------------------------------------------------------------- |
+| **[Supply Chain](/SAC/Suply-Chain)**          | Dokumentasi *Procurement Cycle*, *Supplier Performance*, dan *Closing Value*. |
+| **[Marketing](/Marketing/Progress)**          | Pantau *Progress Feedback* dan *Development* terbaru.                         |
+| **[Operation Marine](/SAC/Operation-Marine)** | Catatan teknis mengenai perubahan FSD dan logistik marine.                    |
 
 ---
 
