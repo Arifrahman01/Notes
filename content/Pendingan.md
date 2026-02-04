@@ -1,9 +1,10 @@
 # Marketing
 	1. Pengejaan Feedback 
-	2. Modul Index Harga
+	2. Dashboard Modul Index Harga
 ---
 # SAP Mining
 	1. Bug ZPM005 - Report Fuel Comsumtion
+	2. ZTable 
 ---
 # SAP EAS
 	1. Report Equipment Status
