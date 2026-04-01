@@ -1,30 +1,48 @@
-# Marketing
-	1. Pengejaan Feedback 
-	2. Dashboard Modul Index Harga
-	3. Approval History
-	4. Pisah Widget List Buyer Gar 38 dan 42
 ---
-# SAP Mining
-	1. Bug ZPM005 - Report Fuel Comsumtion
-	2. ZTable 
+title: ⏳ Daftar Pendingan
+layout: layout
 ---
-# SAP EAS
-	1. Report Equipment Status
-		1. Perubahan Formula
-	2. Report Fuel Comsumtion Analyiss
----
-# SAC
-	1. Story BUP DSP
-		1. CDS BUP Pelayanan Belum sesuai
-		2. CDS BUP Produksi Belum di kerjakan
-		3. Sotry Untuk produksi belum di kerjakan
----	
-# Helpdesk System
----
-# Safety
-	1. Bug di delete document
-	2. Request Portal berita dari PA Ali (Pending)
----
-# General
-	1. Backup database Safety Otomatis 
+
+# ⏳ Daftar Pendingan
+
+> [!NOTE] Status: Tasks yang belum diselesaikan
+> Semua pekerjaan di bawah ini masih dalam proses penyelesaian.
+
+## 📊 Marketing
+
+- [ ] Pengejaan Feedback
+- [ ] Dashboard Modul Index Harga
+- [ ] Approval History
+- [ ] Pisah Widget List Buyer Gar 38 dan 42
+
+## ⛏️ SAP Mining
+
+- [ ] Bug ZPM005 - Report Fuel Consumption
+- [ ] Z-Table Management
+
+## 🏭 SAP EAS (Equipment & Asset Systems)
+
+- [ ] Report Equipment Status
+  - [ ] Perubahan Formula
+- [ ] Report Fuel Consumption Analysis
+
+## 📈 SAC (Supply Chain Analytics)
+
+- [ ] Story BUP DSP
+  - [ ] CDS BUP Pelayanan - Belum sesuai
+  - [ ] CDS BUP Produksi - Belum dikerjakan
+  - [ ] Story untuk Produksi - Belum dikerjakan
+
+## 🆘 Helpdesk System
+
+- [ ] *Belum ada item*
+
+## 🔒 Safety
+
+- [ ] Bug di delete document
+- [ ] Request Portal berita dari PA Ali *(Pending)*
+
+## 🔧 General
+
+- [ ] Backup database Safety Otomatis 
 

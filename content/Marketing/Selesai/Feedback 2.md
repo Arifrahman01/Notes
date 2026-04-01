@@ -1,19 +1,24 @@
-#done 
+---
+title: ✅ Feedback 2 - Laycan Booking Module
+layout: layout
+index: true
+---
 
-##  FEEDBACK SEMENTARA
+# ✅ Feedback 2 - Laycan Booking
 
-**Reviewed by: Iqbal**
+**Status:** ✨ Completed  
+**Reviewer:** Iqbal
 
+## 📋 Module: Laycan Booking
 
-# Modul: Laycan Booking
+- [x] Setelah book laycan, user kembali ke halaman utama atau book laycan baru
+- [x] Status Draft menjadi Proposal
+- [x] Edit laycan date tidak mengubah nilai lama
+- [x] Hapus tombol Approve Nominate
+- [x] Status Nominate Approve menjadi Vessel Nominated
+- [x] Tombol Back bukan Cancel di Edit Vessel Operation
+- [x] Fix % Complete - nilai lifting volume = 10000%
+- [x] **UX:** Update progress di halaman utama, bukan halaman baru
 
-- [x] Setelah laycan booking, user langsung kembali ke halaman utama. ATAU user dapat book laycan yang baru
-- [x] Status “Draft” diganti menjadi “Proposal”
-- [x] Laycan date ketika diedit tidak mengubah nilai lama.
-- [x] Tidak perlu ada tombol “Approve Nominate.” Karena ketika user menominate vessel, itu sudah diapprove. Sehingga ketika user klik “Nominate Vessel” maka user dapat langsung memasukkan nama vessel
-- [x] Status “Nominate Approve” diganti menjadi “Vessel Nominated”
-- [x] di menu “Edit Vessel Operation” harusnya ada tombol “Back” bukan “Cancel”
-- [x] ”% Complete” kebanyakan nol nya. Ketika diisi nilai lifting volume, dia jadi “10000%”
-- [x] Sebenarnya secara interface kalau bisa pengisian update progress tidak perlu di halaman baru, dilakukan di halaman utama saja supaya tidak bolak-balik. Karena, pada prakteknya user harus update 10 vessel dalam satu waktu. Apabila harus klik ke halaman baru, akan sangat inefisien.
-
-Flowchart menyusul
+> [!NOTE] Next Steps
+> Flowchart menyusul

@@ -1,26 +1,46 @@
-
-# Filament Shield 
-### Naik ke porduction
-- Jalankan di local
-	php artisan shield:generate --all
-- Jalan kan di production
-	php artisan shield:publish admin
-		- Pilih -> No
 ---
-## Menambah Shield Spesifik
-	php artisan shield:publish
-		Pilih : No
+title: 🛡️ Filament Shield - Marketing Module
+layout: layout
 ---
-# Generate Ulang
-	php artisan shield:generate --all
 
-# Show
-- [ ] Ganti Password
-- [ ] Create FSA
-- [ ] Create Laycan
-- [ ] Config Email
-- [ ] Create Loading Port
-- [ ] Vessel Operation
-- [ ] Role
-- [ ] User
+# 🛡️ Filament Shield Configuration
+
+## 🚀 Deployment ke Production
+
+### 1️⃣ Jalankan di Local Environment
+
+```bash
+php artisan shield:generate --all
+```
+
+### 2️⃣ Deploy ke Production
+
+```bash
+php artisan shield:publish admin
+# Pilih: No
+```
+
+## ⚙️ Konfigurasi Shield Spesifik
+
+```bash
+php artisan shield:publish
+# Pilih: No
+```
+
+## 🔄 Generate Ulang Shield
+
+```bash
+php artisan shield:generate --all
+```
+
+## ✅ Setup Checklist Marketing Module
+
+- [ ] Ganti Password Admin
+- [ ] Create FSA (Freight Security Agreement)
+- [ ] Create Laycan (Lay Canceling Dates)
+- [ ] Config Email Gateway
+- [ ] Create Loading Port Master Data
+- [ ] Setup Vessel Operation
+- [ ] Configure User Roles
+- [ ] Create System Users
 

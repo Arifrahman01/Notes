@@ -1,12 +1,16 @@
-# Panduan Implementasi SAP RAP: Managed Scenario (CRUD)
+---
+title: 🐍 Panduan SAP RAP - Managed CRUD
+layout: layout
+---
 
-Dokumentasi ini menjelaskan langkah demi langkah cara membuat OData Service menggunakan framework **RAP (ABAP RESTful Programming Model)**
- dengan tipe **Managed**. Guideline ini mencakup proses dari pembuatan CDS hingga service siap digunakan oleh aplikasi eksternal (mis. Node.js).
+# 🐍 Panduan Implementasi SAP RAP: Managed Scenario (CRUD)
+
+Dokumentasi langkah demi langkah cara membuat OData Service menggunakan framework **RAP (ABAP RESTful Programming Model)** dengan tipe **Managed**. Dari pembuatan CDS hingga service siap digunakan oleh aplikasi eksternal.
 
 ---
 
-## 1. Membuat Data Definition (CDS View)
-
+## 1️⃣ Membuat Data Definition (CDS View)
+	
 Langkah pertama adalah mendefinisikan struktur data. Agar dapat melakukan operasi **Create, Update, dan Delete**, CDS harus didefinisikan sebagai *root entity*.
 
 ```abap
@@ -26,7 +30,7 @@ define root view entity Z_TEST_CRUD
 - **Source table**: `zta_test_crud`
 
 
-## 2. Membuat Behavior Definition (BDEF)
+## 2️⃣ Membuat Behavior Definition (BDEF)
 
 Behavior Definition menentukan operasi apa saja yang diizinkan pada entitas. Karena menggunakan tipe **Managed**, SAP akan mengurus operasi database secara otomatis.
 
@@ -61,7 +65,7 @@ authorization master ( instance )
 ```
 
 
-## 3. Implementasi Behavior Pool (Class)
+## 3️⃣ Implementasi Behavior Pool (Class)
 
 Karena menggunakan `authorization master (instance)` dalam mode `strict`, wajib membuat kelas implementasi untuk mencegah short dump. Contoh logika otorisasi sederhana untuk fase pengembangan:
 
@@ -80,7 +84,7 @@ ENDCLASS.
 ```
 
 
-## 4. Membuat Service Definition (SRVD)
+## 4️⃣ Membuat Service Definition (SRVD)
 
 Service Definition digunakan untuk mengekspos entitas CDS ke luar.
 
@@ -92,7 +96,7 @@ define service ZS_TEST_CRUD {
 ```
 
 
-## 5. Membuat Service Binding (SRVB)
+## 5️⃣ Membuat Service Binding (SRVB)
 
 Langkah terakhir adalah mendaftarkan service ke Gateway sehingga mendapatkan URL OData.
 

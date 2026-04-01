@@ -1,64 +1,63 @@
-## TCODEyfe010
-```perhitungan 'Upah Insentif Pupuk' dapat ditemukan di beberapa bagian utama sebagai berikut:
+---
+title: 🏆 Catatan Premi Upah RKB
+layout: layout
+---
 
-### 1. Metode `calc_totalupah_hk` dalam Class `lcl_alv_kwn`
+## 📋 TCODE & Referensi
 
-Di bagian ini, sistem menghitung insentif berdasarkan hasil kerja dan prestasi pupuk.
+**yfe010**
 
-- **Pemanggilan Fungsi:** Nilai insentif diperoleh dari pemanggilan metode `ycl_premi_bkm=>calc_premi_rawat`.
-    
-- **Input Perhitungan:** Menggunakan parameter `im_hasil_kerja` dan `im_hasil_pupuk` (yang diambil dari field `prestasi_pupuk` karyawan).
-    
-- **Output Perhitungan:** Hasil perhitungan (`ex_premi_insentif`) kemudian dimasukkan ke dalam variabel lokal `lv_premi_insentif`.
-    
-- **Penyimpanan ke Tabel:** Nilai dari `lv_premi_insentif` tersebut dipindahkan ke field `<fs_karyawan>-upah_insentif_pupuk`.
-    
+---
 
-### 2. Akumulasi ke Total Upah
+## 📊 Perhitungan Upah Insentif Pupuk
 
-Masih dalam metode yang sama, `upah_insentif_pupuk` menjadi salah satu komponen penambah dalam perhitungan total upah harian karyawan:
+Perhitungan 'Upah Insentif Pupuk' dapat ditemukan di beberapa bagian utama sebagai berikut:
 
-- **Rumus:** `<fs_karyawan>-total_upah = <fs_karyawan>-upah_harian + <fs_karyawan>-upah_premi + <fs_karyawan>-upah_insentif_pupuk + <fs_karyawan>-upah_kerjalibur + <fs_karyawan>-insentif_lembur - <fs_karyawan>-advance`.
-    
+### 1️⃣ Metode `calc_totalupah_hk` - Class `lcl_alv_kwn`
 
-### 3. Kondisi Khusus (Pengecekan Status)
+Sistem menghitung insentif berdasarkan hasil kerja dan prestasi pupuk.
 
-Terdapat pengecekan status kerja tertentu (`lv_wc_others = 'M'`). Jika kondisi ini terpenuhi, maka nilai `upah_insentif_pupuk` akan dipaksa menjadi **0**.
+- **Pemanggilan Fungsi:** `ycl_premi_bkm=>calc_premi_rawat`
+- **Input:** `im_hasil_kerja` dan `im_hasil_pupuk`
+- **Output:** `ex_premi_insentif` → `lv_premi_insentif`
+- **Penyimpanan:** `<fs_karyawan>-upah_insentif_pupuk`
 
-### 4. Metode `simulate_calc` dalam Class `lcl_app`
-
-Kode ini juga melakukan simulasi perhitungan yang identik dengan logika di atas, menggunakan pemanggilan fungsi premi yang sama untuk menentukan nilai insentif pupuk sebelum ditampilkan atau disimpan
-
+### 2️⃣ Akumulasi ke Total Upah
 
 ```
+Total = upah_harian + upah_premi + upah_insentif_pupuk
+        + upah_kerjalibur + insentif_lembur - advance
+```
 
-### LYFG_BKM_RAWATTOP
-Berdasarkan analisis kode pada file `LYFG_BKM_RAWATTOP.txt`, masalah di mana karyawan tidak mendapatkan insentif saat bekerja di dua blok kemungkinan besar disebabkan oleh cara program melakukan **filter data** dan **perhitungan total upah** yang bersifat parsial (per baris/per RKH), bukan akumulatif untuk satu karyawan di semua blok.
+### 3️⃣ Kondisi Khusus
 
-Berikut adalah poin-poin penyebab teknisnya:
+Jika `lv_wc_others = 'M'` → nilai `upah_insentif_pupuk` akan menjadi **0**
 
-### 1. Filter Data Berdasarkan No RKH (Blok)
+### 4️⃣ Metode `simulate_calc` - Class `lcl_app`
 
-Program menggunakan sistem filter yang sangat ketat saat menampilkan atau memproses data karyawan. Ketika Anda memilih sebuah blok (No RKH), program melakukan filter pada tabel `gi_karyawan` hanya untuk RKH tersebut.
+Melakukan simulasi perhitungan identik sebelum ditampilkan/disimpan
 
-- Jika seorang karyawan bekerja di Blok A dan Blok B, maka saat Anda melihat Blok A, data di Blok B "tersembunyi" dari konteks perhitungan saat itu.
-    
+---
 
-### 2. Perhitungan Insentif yang Bersifat Per Baris
+## 🔍 LYFG_BKM_RAWATTOP - Root Cause Analysis
 
-Logika perhitungan upah (`calc_totalupah_hk`) dan simulasi (`simulate_calc`) bekerja dengan cara melakukan _looping_ pada baris yang sedang aktif atau berubah.
+**Masalah:** Karyawan tidak mendapatkan insentif saat bekerja di dua blok
 
-- Di dalam _loop_ tersebut, program memanggil `ycl_premi_bkm=>calc_premi_rawat` dengan mengirimkan `im_hasil_kerja` dan `im_hasil_pupuk` hanya dari baris tersebut.
-    
-- Program **tidak menjumlahkan** hasil kerja karyawan tersebut dari blok lain sebelum menghitung insentif. Akibatnya, jika hasil kerja di satu blok belum mencapai batas minimum (basis) untuk mendapatkan insentif, maka nilai `ex_premi_insentif` yang dikembalikan akan tetap 0.
-    
+**Penyebab Teknis:**
 
-### 3. Validasi Duplikasi yang Mencegah Input
+### Isu 1: Filter Data Berdasarkan RKH (Blok)
 
-Terdapat validasi yang mencegah input karyawan yang sama dalam satu nomor RKH yang sama. Namun, jika karyawan diinput di RKH (blok) yang berbeda, program mengizinkannya tetapi tetap menghitungnya sebagai entitas yang terpisah.
+- Program filter data `gi_karyawan` hanya untuk RKH terpilih
+- Data karyawan di blok lain "tersembunyi" dari konteks perhitungan
+- Jika karyawan di Blok A & B → data B tidak dihitung saat melihat Blok A
 
-### 4. Risiko Pengosongan Upah (Status 'M')
+### Isu 2: Perhitungan Per Baris (Tidak Akumulatif)
 
-Terdapat pengecekan status kerja lain melalui `ycl_premi_utility=>get_pernr_wc_other`.
+- Looping hanya pada baris aktif saat itu
+- Memanggil `calc_premi_rawat` dengan data dari baris tersebut saja
+- **Tidak menjumlahkan** hasil kerja dari blok lain
+- Jika hasil kerja 1 blok < minimum → insentif = 0
 
-- Jika karena bekerja di dua blok sistem mendeteksi adanya konflik status (misal status 'M'), maka kode secara eksplisit akan **mengnolkan semua upah dan insentif** karyawan tersebut:
+### Isu 3: Risiko Pengozongan Upah
+
+- Jika bekerja di 2 blok & status = 'M' → **semua upah & insentif jadi 0**

@@ -1,43 +1,41 @@
-	### Langkah 1: Membuat Maintenance Dialog (TMG)
+---
+title: 📐 Membuat Maintenance Table Dialog
+layout: layout
+---
 
-1. Buka transaksi **SE11**, masukkan nama tabel `ZTA_FI_GRGL`, lalu klik **Change**.
-    
-2. Di menu bagian atas, pilih: **Utilities** > **Table Maintenance Generator**.
-    
-3. Isi parameter berikut:
-    
-    - **Authorization Group:** Isi dengan `&NC&` (artinya tidak ada otorisasi khusus, siapa saja bisa akses).
-        
-    - **Function Group:** Isi dengan nama yang sama dengan tabel Anda, yaitu `ZTA_FI_GRGL` (Jika belum ada, sistem akan meminta Anda membuatnya, klik _Yes_ saja).
-        
-    - **Maintenance Screens:** Pilih tipe **One Step**.
-        
-    - **Screen Number:** Klik tombol **Find Screen Number(s)** di toolbar, pilih **Propose Screen Number**, maka sistem akan mengisi angka otomatis (biasanya `0001`).
-        
-4. Klik tombol **Create** (ikon kertas putih/folder di pojok kiri atas).
-    
-5. Jika muncul _pop-up_ permintaan **Request/Task** (Transport Request), masukkan nomor request yang ada atau klik _Create Request_ baru.
-    
-6. Tunggu hingga muncul pesan di status bar: _"Request for ZTA_FI_GRGL completed successfully"_.
+# 📐 Membuat Maintenance Table Dialog (TMG)
 
-#### Create Table With SE16N
+## Langkah 1: Membuat Maintenance Dialog di SE11
 
-### 1. Gunakan Function Module `SE16N_INTERFACE`
+1. Buka transaksi **SE11**, masukkan nama tabel (misal `ZTA_FI_GRGL`), klik **Change**
 
-Jika SE16N tidak mengizinkan penambahan data secara langsung karena tabel kosong, Anda bisa memicu mode edit melalui _Function Builder_ (SE37):
+2. Di menu, pilih: **Utilities** > **Table Maintenance Generator**
 
-- Buka transaksi **SE37**.
-    
-- Masukkan Nama Function Module: `SE16N_INTERFACE`.
-    
-- Tekan **F8** (Test/Execute).
-    
-- Isi parameter berikut:
-    
-    - `I_TAB`: (Nama tabel Anda)
-        
-    - `I_EDIT`: `X`
-        
-    - `I_SAPEDIT`: `X`
-        
-- Eksekusi (**F8**). Ini akan membuka tampilan grid SE16N dalam mode edit meskipun data masih kosong.
+3. Isi parameter:
+   - **Authorization Group:** `&NC&` (siapa saja bisa akses)
+   - **Function Group:** Nama sama dengan tabel: `ZTA_FI_GRGL`
+   - **Maintenance Screens:** Pilih **One Step**
+   - **Screen Number:** Klik **Find Screen Number(s)** > **Propose** (auto `0001`)
+
+4. Klik tombol **Create** (ikon folder putih di pojok kiri)
+
+5. Input **Transport Request** jika diminta
+
+6. Tunggu pesan sukses: _"Request for ZTA_FI_GRGL completed successfully"_
+
+---
+
+## Langkah 2: Create Table dengan SE16N
+
+### Gunakan Function Module `SE16N_INTERFACE`
+
+Jika SE16N tidak mengizinkan input di tabel kosong:
+
+1. Buka transaksi **SE37**
+2. Masukkan: `SE16N_INTERFACE`
+3. Tekan **F8** (Test/Execute)
+4. Isi parameter:
+   - `I_TAB`: Nama tabel
+   - `I_EDIT`: `X`
+   - `I_SAPEDIT`: `X`
+5. Execute (**F8**) - grid SE16N akan membuka dalam mode edit

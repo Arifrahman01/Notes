@@ -1,25 +1,41 @@
-Feedback after Go Live Modul Booking, Laycan dan , Vesel Operation
-## FSA
+---
+title: ✅ Feedback 5 - Post Go-Live Fixes
+layout: layout
+index: true
+---
 
+# ✅ Feedback 5 - Post Go-Live Improvements
 
-- [x] Quantity dan note tidak reset ketika perubahan Spesifikasi
-- [x] Bugfixing Quantity FSA
-- [x] Email Notifikasi ke pembuat fsa, ketika IJ approve
+**Status:** ✨ Completed  
+**Phase:** Production Monitoring & Bug Fixes
 
-## Contract
+---
+
+## 📋 Module: FSA
+
+- [x] Quantity dan note tidak reset saat ubah spesifikasi
+- [x] Bugfix Quantity FSA
+- [x] Email notifikasi ke pembuat FSA saat IJ approve
+
+## 📋 Module: Contract
+
 - [x] Tambah filter date range
-- [x] Perbaikan attachment tidak bisa di input jika tidak ada otorisasis
-- [x] Button approve di contract ganti jadi submit
-- [x] Nama document mengikuti nama asli tambah Timestime 
-## Laycan
+- [x] Fix: Attachment tidak bisa di-input tanpa otorisasi
+- [x] Button "Approve" → "Submit"
+- [x] Nama document = nama asli + timestamp
+
+## 📋 Module: Laycan
+
 - [x] Tambah filter date range
-- [x] Penyesuaian Role, Create Laycan dari tim Marketing
-- [x] Penyesuaian Role, Confirm laycan dari Tim operation
+- [x] Adjust role: Marketing tim bisa create laycan
+- [x] Adjust role: Operation tim bisa confirm laycan
 
-## Vessel
-- [x] Tambah filter date range 
+## 📋 Module: Vessel Operations
 
-## General 
-- [x] Fitur Reset Password dengan email
+- [x] Tambah filter date range
+
+## 🛠️ General Features
+
+- [x] Implementasi Reset Password dengan email
 
 

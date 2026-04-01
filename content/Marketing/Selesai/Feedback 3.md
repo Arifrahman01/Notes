@@ -1,5 +1,16 @@
-#done 
-# MODUL CONTRACT
+---
+title: ✅ Feedback 3 - Contract & Laycan Updates
+layout: layout
+index: true
+---
+
+# ✅ Feedback 3 - System Updates
+
+**Status:** ✨ Completed
+
+---
+
+## 📋 Module: Contract
 - [x] Contract volume itu mandatory
 - [x] Judulnya “Maximum volume”
 - [x] Judul “Notes Shipment” diganti menjadi “Additional note for shipment”
