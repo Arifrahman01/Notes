@@ -1,0 +1,1 @@
+1. SMW0 -> Binary Data

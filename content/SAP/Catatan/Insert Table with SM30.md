@@ -1,4 +1,4 @@
-### Langkah 1: Membuat Maintenance Dialog (TMG)
+	### Langkah 1: Membuat Maintenance Dialog (TMG)
 
 1. Buka transaksi **SE11**, masukkan nama tabel `ZTA_FI_GRGL`, lalu klik **Change**.
     
@@ -19,3 +19,25 @@
 5. Jika muncul _pop-up_ permintaan **Request/Task** (Transport Request), masukkan nomor request yang ada atau klik _Create Request_ baru.
     
 6. Tunggu hingga muncul pesan di status bar: _"Request for ZTA_FI_GRGL completed successfully"_.
+
+#### Create Table With SE16N
+
+### 1. Gunakan Function Module `SE16N_INTERFACE`
+
+Jika SE16N tidak mengizinkan penambahan data secara langsung karena tabel kosong, Anda bisa memicu mode edit melalui _Function Builder_ (SE37):
+
+- Buka transaksi **SE37**.
+    
+- Masukkan Nama Function Module: `SE16N_INTERFACE`.
+    
+- Tekan **F8** (Test/Execute).
+    
+- Isi parameter berikut:
+    
+    - `I_TAB`: (Nama tabel Anda)
+        
+    - `I_EDIT`: `X`
+        
+    - `I_SAPEDIT`: `X`
+        
+- Eksekusi (**F8**). Ini akan membuka tampilan grid SE16N dalam mode edit meskipun data masih kosong.

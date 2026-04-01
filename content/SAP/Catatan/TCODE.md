@@ -1,0 +1,2 @@
+- SM12 - Hapus Cache Nyangkut
+- ST22 - List Error ABAP

@@ -7,3 +7,8 @@ php artisan icons:cache
 php artisan optimize
 
 
+MCU
+SafetyJB
+ProfilCompanyJB
+
+

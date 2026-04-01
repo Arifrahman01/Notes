@@ -1,6 +1,8 @@
 # Marketing
 	1. Pengejaan Feedback 
 	2. Dashboard Modul Index Harga
+	3. Approval History
+	4. Pisah Widget List Buyer Gar 38 dan 42
 ---
 # SAP Mining
 	1. Bug ZPM005 - Report Fuel Comsumtion
