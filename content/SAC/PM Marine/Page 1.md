@@ -1,11 +1,14 @@
 ## Filter Global
 
-**Equipment Types:**
-- **AE** - Auxiliary Engine
-- **BG** - Barge
-- **CP** - Cargo Pump
-- **GB** - Gearbox
-- **ME** - Main Engine
+### Equipment Types
+
+| Code | Description |
+| :--- | :--- |
+| **AE** | Auxiliary Engine |
+| **BG** | Barge |
+| **CP** | Cargo Pump |
+| **GB** | Gearbox |
+| **ME** | Main Engine |
 
 ### Metrics & Status
 
